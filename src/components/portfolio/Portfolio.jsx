@@ -44,7 +44,9 @@ export default function Portfolio() {
       <h1>Portfolio</h1>
       <ul>
         {list.map(item=>(
-          <PortfolioList title={item.title} active={selected === item.id} setSelected={setSelected} id={item.id}/>
+          <div key={item.id}>
+            <PortfolioList title={item.title} active={selected === item.id} setSelected={setSelected} id={item.id}/>
+          </div>
         ))}
       </ul>
       <div className="container">
